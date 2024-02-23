@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply my-0 mx-[10%];
+  }
+}
+
+@layer utilities {
+  .h3 {
+    @apply text-[14.5px];
+  }
+
+  .card {
+    @apply rounded-xl overflow-hidden;
+  }
+
+  .recipe-img {
+    @apply rounded-2xl object-cover w-full h-full;
+  }
+
+  .title {
+    @apply absolute z-10 bottom-0 left-0 h-[40%] w-full flex justify-center items-center text-center text-white font-semibold text-[18px];
+  }
+  .Slink {
+    @apply flex items-center text-center justify-center gap-[3rem] my-[2rem];
+  }
+
+  .Links {
+    @apply rounded-full bg-black h-[4.5rem] w-[4.5rem] flex flex-col items-center justify-center overflow-hidden text-white cursor-pointer
+    focus:bg-orange-800;
+  }
+  .searchInput {
+    @apply bg-gray-600 rounded-3xl w-full mt-5 h-[2.5rem] border-none outline-none px-[3rem] py-[1rem] text-white text-[20px];
+  }
+
+  .seacrchSvg {
+    @apply text-white size-5;
+  }
+  button {
+    @apply border border-black p-2 text-white text-[17px] font-semibold bg-gray-500 w-[9rem] h-[3rem];
+  }
+  .actives {
+    @apply bg-black border border-white;
+  }
+}
