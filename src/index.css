@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply my-0 mx-[10%];
+    @apply my-0 mx-[10%] bg-[#0d1117] text-white font-sans;
   }
 }
 
@@ -28,21 +28,28 @@
     @apply flex items-center text-center justify-center gap-[3rem] my-[2rem];
   }
 
+  .Slink button {
+    @apply rounded-full bg-[#30363d] h-[4.5rem] w-[4.5rem]  overflow-hidden text-white cursor-pointer border-none;
+  }
+
+  .Slink button.active {
+    @apply bg-orange-700 text-black;
+  }
+
   .Links {
-    @apply rounded-full bg-black h-[4.5rem] w-[4.5rem] flex flex-col items-center justify-center overflow-hidden text-white cursor-pointer
-    focus:bg-orange-800;
+    @apply flex justify-center items-center flex-col;
   }
   .searchInput {
-    @apply bg-gray-600 rounded-3xl w-full mt-5 h-[2.5rem] border-none outline-none px-[3rem] py-[1rem] text-white text-[20px];
+    @apply bg-black rounded-3xl w-full mt-5 h-[2.5rem] border-none outline-none px-[3rem] py-[1rem] text-white text-[20px];
   }
 
   .seacrchSvg {
     @apply text-white size-5;
   }
   button {
-    @apply border border-black p-2 text-white text-[17px] font-semibold bg-gray-500 w-[9rem] h-[3rem];
+    @apply border border-black p-2 text-white text-[17px] font-semibold bg-[#30363d] w-[9rem] h-[3rem];
   }
   .actives {
-    @apply bg-black border border-white;
+    @apply bg-orange-700 text-black;
   }
 }

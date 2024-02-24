@@ -7,19 +7,21 @@ const Search = () => {
   const navigate = useNavigate();
   const handleSumbit = (e) => {
     e.preventDefault();
+
     navigate("/searched/" + search);
   };
 
   return (
     <div className="w-full relative">
       <form onSubmit={handleSumbit}>
-        <IoSearchOutline className="seacrchSvg absolute top-[52%] left-[18px]" />
+        <IoSearchOutline className="seacrchSvg absolute top-[55%] left-[18px]" />
         <div className="">
           <input
             type="text"
-            onChange={(e) => setSearch(e.target.value)}
             value={search}
+            onChange={(e) => setSearch(e.target.value)}
             className="searchInput"
+            placeholder="Search"
           />
         </div>
       </form>
