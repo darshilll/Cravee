@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import Search from "./Search";
 import { IoArrowBack } from "react-icons/io5";
-import { useNavigate, useParams } from "react-router-dom";
-
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { SiCodechef } from "react-icons/si";
 const Recipe = () => {
   const [recipe, setRecipe] = useState([]);
   const [active, setActive] = useState("instructions");
@@ -29,6 +29,13 @@ const Recipe = () => {
 
   return (
     <div>
+      <h1 className="mt-5 text-left text-[30px] font-serif font-bold tracking-wide max-w-fit">
+        <Link to="/" className="flex gap-3">
+          <SiCodechef size={55} className="text-[#e1c1b3]" />
+          Cravee
+        </Link>
+      </h1>
+
       <Search />
       <button
         className="flex items-center justify-center gap-2 mt-3 color-white transform scale-80 max-w-fit bg-black text-white rounded-full p-2 border-none w-20 h-10"

@@ -12,7 +12,7 @@ const Category = () => {
   };
 
   return (
-    <NavLink className="Slink ">
+    <NavLink className="Slink">
       <button
         className={activeButton === 1 ? "active" : ""}
         onClick={() => handleClick(1)}

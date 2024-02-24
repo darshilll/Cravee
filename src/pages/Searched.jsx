@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import Search from "../components/Search";
 import { IoArrowBack } from "react-icons/io5";
 import { motion } from "framer-motion";
+import { SiCodechef } from "react-icons/si";
 
 const Searched = () => {
   const [serached, setSearched] = useState([]);
@@ -31,6 +32,13 @@ const Searched = () => {
 
   return (
     <div>
+      <h1 className="mt-5 text-left text-[30px] font-serif font-bold tracking-wide max-w-fit">
+        <Link to="/" className="flex gap-3">
+          <SiCodechef size={55} className="text-[#e1c1b3]" />
+          Cravee
+        </Link>
+      </h1>
+
       <Search />
       <button
         to="/"
