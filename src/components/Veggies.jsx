@@ -8,12 +8,12 @@ const Veggies = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 2000,
+    speed: 2500,
     slidesToShow: 3,
     slidesToScroll: 1,
 
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 5000,
     pauseOnHover: true,
   };
 
