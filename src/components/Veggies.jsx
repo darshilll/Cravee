@@ -1,8 +1,22 @@
-import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 const Veggies = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 2000,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+
+    autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: true,
+  };
+
   const [veggies, setVeggies] = useState([]);
 
   const getVeggies = async () => {
@@ -30,33 +44,23 @@ const Veggies = () => {
     <div>
       <div className="px-[2rem]">
         <h1 className="font-bold text-[25px]">Our Vegetarian Picks</h1>
-        <Splide
-          options={{
-            perPage: 3,
-            arrows: false,
-            pagination: false,
-            drag: "free",
-            gap: "3rem",
-          }}
-        >
+        <Slider {...settings} className="slick-slider">
           {veggies.map((item) => {
             return (
-              <SplideSlide key={item.id}>
-                <div className="card relative">
-                  <Link to={"/recipe/" + item.id}>
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="recipe-img"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#443b30]"></div>
-                    <p className="title">{item.title}</p>
-                  </Link>
-                </div>
-              </SplideSlide>
+              <div className="card relative" key={item.id}>
+                <Link to={"/recipe/" + item.id}>
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="recipe-img"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0d1117]"></div>
+                  <p className="title">{item.title}</p>
+                </Link>
+              </div>
             );
           })}
-        </Splide>
+        </Slider>
       </div>
     </div>
   );

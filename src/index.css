@@ -52,4 +52,10 @@
   .actives {
     @apply bg-orange-700 text-black;
   }
+
+  .slick-slider img {
+    width: calc(100% - 20px); /* Subtract the gap width from the slide width */
+  }
+
+  /* Ensure the last slide doesn't have a right margin */
 }
