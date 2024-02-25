@@ -8,7 +8,7 @@ const Veggies = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 2500,
+    speed: 2000,
     slidesToShow: 3,
     slidesToScroll: 1,
 
@@ -44,6 +44,7 @@ const Veggies = () => {
     <div>
       <div className="px-[2rem]">
         <h1 className="font-bold text-[25px]">Our Vegetarian Picks</h1>
+        <br />
         <Slider {...settings} className="slick-slider">
           {veggies.map((item) => {
             return (

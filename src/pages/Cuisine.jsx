@@ -33,7 +33,7 @@ const Cuisine = () => {
       <Search />
       <Category />
 
-      <div className="grid grid-cols-4 gap-[2rem]">
+      <div className="grid grid-cols-4 gap-[2rem] mt-8">
         {typeRecipe.map((item) => {
           return (
             <motion.div

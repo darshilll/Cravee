@@ -10,7 +10,7 @@ const Popular = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 2500,
+    speed: 2000,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
@@ -43,6 +43,7 @@ const Popular = () => {
     <div>
       <div className="px-[2rem]">
         <h1 className="font-bold text-[25px]">Popular Picks</h1>
+        <br />
         <Slider {...settings} className="slick-slider">
           {random.map((item) => {
             return (

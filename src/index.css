@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply my-0 mx-[10%] bg-[#0d1117] text-white font-sans;
+    @apply mb-[5%] mx-[5%] bg-[#0d1117] text-white font-sans;
   }
 }
 
