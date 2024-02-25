@@ -3,6 +3,7 @@ import Search from "./Search";
 import { IoArrowBack } from "react-icons/io5";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { SiCodechef } from "react-icons/si";
+import { motion } from "framer-motion";
 const Recipe = () => {
   const [recipe, setRecipe] = useState([]);
   const [active, setActive] = useState("instructions");
@@ -44,50 +45,62 @@ const Recipe = () => {
         <IoArrowBack />
         <h3 className="h3">back</h3>
       </button>
-      <div className="flex justify-between mt-[5rem]">
-        <div>
-          <h2 className="text-center mb-2 font-bold text-[18px]">
-            {recipe.title}
-          </h2>
-          <img src={recipe.image} alt={recipe.title} className="rounded-2xl" />
-        </div>
+      <div>
+        <motion.div
+          animate={{ opacity: 1 }}
+          initial={{ opacity: 0 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.8 }}
+          className="flex justify-between mt-[5rem]"
+        >
+          <div>
+            <h2 className="text-center mb-2 font-bold text-[18px]">
+              {recipe.title}
+            </h2>
+            <img
+              src={recipe.image}
+              alt={recipe.title}
+              className="rounded-2xl"
+            />
+          </div>
 
-        <div className=" ml-[5rem]">
-          <div className="flex gap-[4rem]">
-            <button
-              className={active === "instructions" ? "actives" : ""}
-              onClick={() => setActive("instructions")}
-            >
-              Instructions
-            </button>
-            <button
-              className={active === "ingredients" ? "actives" : ""}
-              onClick={() => setActive("ingredients")}
-            >
-              Ingredients
-            </button>
+          <div className=" ml-[5rem]">
+            <div className="flex gap-[4rem]">
+              <button
+                className={active === "instructions" ? "actives" : ""}
+                onClick={() => setActive("instructions")}
+              >
+                Instructions
+              </button>
+              <button
+                className={active === "ingredients" ? "actives" : ""}
+                onClick={() => setActive("ingredients")}
+              >
+                Ingredients
+              </button>
+            </div>
+            <div className="w-[35rem] mt-4 -ml-4">
+              {active === "instructions" && (
+                <div>
+                  <p dangerouslySetInnerHTML={{ __html: recipe.summary }}></p>
+                  <br />
+                  <p
+                    dangerouslySetInnerHTML={{ __html: recipe.instructions }}
+                  ></p>
+                </div>
+              )}
+              {active === "ingredients" && (
+                <div>
+                  <ul>
+                    {recipe.extendedIngredients.map((ingredient) => (
+                      <li key={ingredient.id}>{ingredient.original}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
           </div>
-          <div className="w-[35rem] mt-4 -ml-4">
-            {active === "instructions" && (
-              <div>
-                <p dangerouslySetInnerHTML={{ __html: recipe.summary }}></p>
-                <br />
-                <p
-                  dangerouslySetInnerHTML={{ __html: recipe.instructions }}
-                ></p>
-              </div>
-            )}
-            {active === "ingredients" && (
-              <div>
-                <ul>
-                  {recipe.extendedIngredients.map((ingredient) => (
-                    <li key={ingredient.id}>{ingredient.original}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
