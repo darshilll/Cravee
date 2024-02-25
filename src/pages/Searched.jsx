@@ -58,23 +58,31 @@ const Searched = () => {
           <div className="grid grid-cols-4 gap-[2rem] mt-8">
             {serached.map((item) => {
               return (
-                <div key={item.id}>
-                  <div className="flex items-center justify-center">
-                    <div className="">
-                      <Link to={"/recipe/" + item.id}>
-                        <img
-                          src={item.image}
-                          alt={item.title}
-                          className="rounded-2xl 
+                <motion.div
+                  key={item.id}
+                  animate={{ opacity: 1 }}
+                  initial={{ opacity: 0 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <div>
+                    <div className="flex items-center justify-center">
+                      <div className="">
+                        <Link to={"/recipe/" + item.id}>
+                          <img
+                            src={item.image}
+                            alt={item.title}
+                            className="rounded-2xl 
                     w-full"
-                        />
-                        <p className="text-center p-1 font-bold font-sans">
-                          {item.title}
-                        </p>
-                      </Link>
+                          />
+                          <p className="text-center p-1 font-bold font-sans">
+                            {item.title}
+                          </p>
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>
