@@ -40,7 +40,7 @@
     @apply flex justify-center items-center flex-col;
   }
   .searchInput {
-    @apply bg-black rounded-3xl w-full mt-5 h-[2.5rem] border-none outline-none px-[3rem] py-[1rem] text-white text-[20px];
+    @apply bg-black rounded-3xl w-full mt-5 h-[2.5rem] border-none outline-none px-[3rem] py-[1rem] text-white text-[20px] flex justify-center items-center;
   }
 
   .seacrchSvg {

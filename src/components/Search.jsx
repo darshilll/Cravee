@@ -14,7 +14,7 @@ const Search = () => {
   return (
     <div className="w-full relative">
       <form onSubmit={handleSumbit}>
-        <IoSearchOutline className="seacrchSvg absolute top-[55%] left-[18px]" />
+        <IoSearchOutline className="seacrchSvg absolute top-[30%] left-[18px]" />
         <div className="">
           <input
             type="text"
