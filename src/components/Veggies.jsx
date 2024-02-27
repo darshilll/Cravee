@@ -45,7 +45,7 @@ const Veggies = () => {
       <div className="px-[2rem]">
         <h1 className="font-bold text-[25px]">Our Vegetarian Picks</h1>
         <br />
-        <Slider {...settings} className="slick-slider">
+        <Slider {...settings} className="slick-slide">
           {veggies.map((item) => {
             return (
               <div className="card relative" key={item.id}>
