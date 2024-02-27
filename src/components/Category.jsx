@@ -11,7 +11,6 @@ const Category = () => {
     e.preventDefault();
     setActiveButton(buttonId);
   };
-  console.log(activeButton);
 
   return (
     <div className="Slink">

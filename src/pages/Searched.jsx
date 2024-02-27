@@ -42,7 +42,7 @@ const Searched = () => {
       <Search />
       <button
         to="/"
-        className="flex items-center justify-center gap-2 mt-3 color-white transform scale-80 max-w-fit bg-black text-white rounded-full p-2 w-15 h-10"
+        className="flex items-center justify-center gap-2 mt-3 color-white transform scale-80 max-w-fit bg-black text-white rounded-full p-2 w-15 h-10 font-bold"
         onClick={handleSumbit}
       >
         <IoArrowBack />

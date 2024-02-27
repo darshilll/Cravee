@@ -17,7 +17,6 @@ const Recipe = () => {
     const detailData = await data.json();
     setRecipe(detailData);
   };
-  console.log(recipe);
 
   useEffect(() => {
     getRecipe();
@@ -39,7 +38,7 @@ const Recipe = () => {
 
       <Search />
       <button
-        className="flex items-center justify-center gap-2 mt-3 color-white transform scale-80 max-w-fit bg-black text-white rounded-full p-2 border-none w-20 h-10"
+        className="flex items-center justify-center gap-2 mt-3 color-white transform scale-80 max-w-fit bg-black text-white rounded-full p-2 border-none w-20 h-10 font-bold"
         onClick={handleClick}
       >
         <IoArrowBack />
@@ -51,10 +50,10 @@ const Recipe = () => {
           initial={{ opacity: 0 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex justify-between mt-[5rem]"
+          className="flex justify-between mt-[2rem]"
         >
           <div>
-            <h2 className="text-center mb-2 font-bold text-[18px]">
+            <h2 className="text-center mb-4 font-bold text-[25px]">
               {recipe.title}
             </h2>
             <img
