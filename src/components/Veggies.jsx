@@ -6,12 +6,13 @@ import Slider from "react-slick";
 
 const Veggies = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 1500,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
+
     autoplaySpeed: 5000,
     pauseOnHover: true,
     responsive: [

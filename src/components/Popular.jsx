@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Popular = () => {
   const [random, setRandom] = useState([]);
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 2000,
     slidesToShow: 4,

@@ -26,7 +26,6 @@ const Home = () => {
       >
         <Veggies />
         <br />
-        <br />
         <Popular />
       </motion.div>
     </>
