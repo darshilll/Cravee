@@ -8,13 +8,26 @@ const Veggies = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 2000,
+    speed: 1500,
     slidesToShow: 3,
     slidesToScroll: 1,
-
     autoplay: true,
     autoplaySpeed: 5000,
     pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 838,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 426, // Adjust breakpoint as needed
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   const [veggies, setVeggies] = useState([]);
@@ -43,7 +56,9 @@ const Veggies = () => {
   return (
     <div>
       <div className="px-[2rem]">
-        <h1 className="font-bold text-[25px]">Our Vegetarian Picks</h1>
+        <h1 className="font-bold text-[18px] xl:text-[25px] lg:text-[25px]">
+          Our Vegetarian Picks
+        </h1>
         <br />
         <Slider {...settings} className="slick-slider">
           {veggies.map((item) => {

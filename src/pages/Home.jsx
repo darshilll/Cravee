@@ -9,9 +9,9 @@ import { SiCodechef } from "react-icons/si";
 const Home = () => {
   return (
     <>
-      <h1 className="mt-5 text-left text-[30px] font-serif font-bold tracking-wide max-w-fit">
-        <Link to="/" className="flex gap-3">
-          <SiCodechef size={55} className="text-[#e1c1b3]" />
+      <h1 className="mt-5 text-left text-[20px] xl:text-[30px] lg:text-[25px] md:text-[22px] font-serif font-bold tracking-wide max-w-fit">
+        <Link to="/" className="flex gap-1 items-center">
+          <SiCodechef size={40} className="md:size-16 xl:size-20 lg:size-16" />
           Cravee
         </Link>
       </h1>

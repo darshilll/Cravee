@@ -50,10 +50,10 @@ const Recipe = () => {
           initial={{ opacity: 0 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex justify-between mt-[2rem]"
+          className="xs:flex xs:flex-col xs:items-center gap-5 mt-[1rem] xl:flex  xl:justify-between xl:mt-[2rem]"
         >
           <div>
-            <h2 className="text-center mb-4 font-bold text-[25px]">
+            <h2 className="text-left mb-4 font-bold text-[18px] xl:text-[25px] lg:text-[22px] md:text-[20px]">
               {recipe.title}
             </h2>
             <img
@@ -63,8 +63,8 @@ const Recipe = () => {
             />
           </div>
 
-          <div className=" ml-[5rem]">
-            <div className="flex gap-[4rem]">
+          <div className="xl:ml-[5rem] mt-5">
+            <div className="flex gap-5 xl:gap-[4rem] ">
               <button
                 className={active === "instructions" ? "actives" : ""}
                 onClick={() => setActive("instructions")}
@@ -78,7 +78,7 @@ const Recipe = () => {
                 Ingredients
               </button>
             </div>
-            <div className="w-[35rem] mt-4 -ml-4">
+            <div className="text-[14px]  xl:w-[35rem] mt-4">
               {active === "instructions" && (
                 <div>
                   <p dangerouslySetInnerHTML={{ __html: recipe.summary }}></p>

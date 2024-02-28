@@ -16,6 +16,20 @@ const Popular = () => {
     autoplay: true,
     autoplaySpeed: 5000,
     pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 838,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 426, // Adjust breakpoint as needed
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   const getPopular = async () => {
@@ -42,7 +56,9 @@ const Popular = () => {
   return (
     <div>
       <div className="px-[2rem]">
-        <h1 className="font-bold text-[25px]">Popular Picks</h1>
+        <h1 className="font-bold text-[18px] xl:text-[25px] lg:text-[25px]">
+          Popular Picks
+        </h1>
         <br />
         <Slider {...settings} className="slick-slider">
           {random.map((item) => {
