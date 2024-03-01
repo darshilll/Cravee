@@ -29,7 +29,7 @@ const Searched = () => {
   useEffect(() => {
     getSearched(params.search);
     setLoading(false);
-  }, [params.search]);
+  }, [params.searc]);
 
   return (
     <div>
