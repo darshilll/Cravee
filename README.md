@@ -1,6 +1,6 @@
 # Cravee - Food Recipe Web App🍕🧑‍🍳
 
-Cravee is a delightful food recipe web application built with React.js and Tailwind CSS, enriched with data fetched from the Spoonacular Recipe and Food API. Users can explore a variety of popular dishes, access detailed recipe instructions, and view ingredients effortlessly.
+Cravee is a delightful food recipe web application built with React.js and Tailwind CSS, enriched with data fetched from the Spoonacular Recipe and Food API. Users can explore a variety of popular dishes, access detailed recipe instructions, and view ingredients effortlessly on any device thanks to its full responsiveness.
 
 ## 🔍Features
 
