@@ -13,7 +13,7 @@ const App = () => {
           <Route path="/" element={<Home />}></Route>
           <Route path="/cuisine/:type" element={<Cuisine />}></Route>
           <Route path="/searched/:search" element={<Searched />}></Route>
-          <Route path="/recipe/:name" element={<Recipe />}></Route>
+          <Route path="/recipe/:nam" element={<Recipe />}></Route>
         </Routes>
       </BrowserRouter>
     </AnimatePresence>
