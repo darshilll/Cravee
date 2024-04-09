@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import Search from "./Search";
 import { IoArrowBack } from "react-icons/io5";
@@ -5,18 +6,33 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { SiCodechef } from "react-icons/si";
 import { motion } from "framer-motion";
 const Recipe = () => {
-  const [recipe, setRecipe] = useState([]);
+  const [recipe, setRecipe] = useState({});
   const [active, setActive] = useState("instructions");
   let params = useParams();
   const navigate = useNavigate();
 
   const getRecipe = async () => {
-    const data = await fetch(
-      `https://api.spoonacular.com/recipes/${params.name}/information?apiKey=d0e581a34a994e118b0a44f50b57dde5`
-      // `https://api.spoonacular.com/recipes/${params.name}/information?apiKey=d0e581a34a994e118b0a44f50b57dde5`
-    );
-    const detailData = await data.json();
-    setRecipe(detailData);
+    try {
+      if (!params || !params.name) {
+        throw new Error("Recipe name is not defined");
+      }
+
+      const data = await fetch(
+        `https://api.spoonacular.com/recipes/${params.name}/information?apiKey=d0e581a34a994e118b0a44f50b57dde5`
+      );
+
+      if (!data.ok) {
+        throw new Error(
+          `Failed to fetch recipe: ${data.status} ${data.statusText}`
+        );
+      }
+
+      const detailData = await data.json();
+      setRecipe(detailData);
+    } catch (error) {
+      console.error("Error fetching recipe:", error);
+      // Handle the error here, e.g., display a message to the user
+    }
   };
 
   useEffect(() => {
