@@ -8,7 +8,7 @@ const Veggies = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 1500,
+    speed: 1000,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
